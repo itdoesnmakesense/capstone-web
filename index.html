@@ -1,0 +1,67 @@
+<html>
+<head>
+  <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+      <link rel="stylesheet" type="text/css" href="./lib/www/lib/bootstrap/dist/css/bootstrap.min.css">
+      <link rel="stylesheet" type="text/css" href="styles/main.css">
+      <link href='http://fonts.googleapis.com/css?family=Lato:i|300,400,700' rel='stylesheet' type='text/css'>
+  <title>Capstone</title>
+</head>
+<body  ng-app="PickApp">
+  <script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '725047404293906',
+      xfbml      : true,
+      version    : 'v2.4'
+    });
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "//connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script>
+
+
+
+
+<div ng-view></div>
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDVQX4JVqkEhaWNbkof9bOAABRYyAJ_8r8&libraries=places&callback=initAutocomplete"></script>
+
+<script src="lib/www/lib/angular/angular.min.js"></script>
+<script src="lib/www/lib/firebase/firebase.js"></script>
+<script src="lib/www/lib/angularfire/dist/angularfire.min.js"></script>
+<script src="lib/www/lib/angular-route/angular-route.min.js"></script>
+<script src="lib/www/lib/angular-filter/dist/angular-filter.min.js"></script>
+<script src="lib/www/lib/angular-bootstrap/ui-bootstrap.min.js"></script>
+<script src="lib/www/lib/jquery/dist/jquery.min.js"></script>
+<script src="lib/www/lib/ngFitText/src/ng-FitText.js"></script>
+<script src="lib/www/lib/oauth-signature/dist/oauth-signature.min.js"></script>
+<script src="app/app.js"></script>
+<script src="app/controllers/login.js"></script>
+<script src="app/controllers/howBout.js"></script>
+<script src="app/controllers/main.js"></script>
+<script src="app/controllers/oh.js"></script>
+<script src="app/controllers/load.js"></script>
+<script src="app/controllers/winner.js"></script>
+<script src="app/factories/uid-handler.js"></script>
+<script src="app/factories/yelpAPI.js"></script>
+<script src="app/factories/geoLocate.js"></script>
+<!-- <script src="app/factories/album_storage.js"></script>
+<script src="app/filters/capitalize.js"></script> -->
+</body>
+</html>

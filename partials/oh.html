@@ -1,0 +1,57 @@
+<div class="container-fluid" ng-controller="ohCtrl">
+  <div class= "col-lg-12 col-md-12 col-sm-12 col-xs-12 firstOh">
+    <div class="row">
+      <div class= "col-lg-12 col-md-12 col-sm-12 col-xs-12 secondOh">
+        <div class="row">
+          <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 optionsCol">
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 ohLocalBtnDiv">
+              <a class="col-lg-12 col-md-12 col-sm-12 col-xs-12 btn btn-primary ohBtns" ng-click="local()">
+                <h3 data-fittext=".8" data-fittext-min="20" data-fittext-max="60">Local</h3>
+              </a>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 ohPopBtnDiv">
+              <a class="col-lg-12 col-md-12 col-sm-12 col-xs-12 btn btn-primary ohBtns" ng-click="order('rating')">
+                <h3 data-fittext=".8" data-fittext-min="20" data-fittext-max="60">Popular</h3>
+                 <span class="sortorder" ng-show="predicate === 'rating'" ng-class="{reverse:reverse}"></span>
+              </a>
+            </div>
+          </div><!--optionsCol -->
+       
+          <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 placesDiv">
+            <div class="row placesRowMargin">
+              <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 objDiv">
+                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 placeObjDiv" ng-model="numLimit" ng-init="handleNearBySearchResults()" ng-repeat="place in places | limitTo:numLimit | orderBy:predicate:reverse">
+                    <div class="row placesDataRow">
+                      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 placesContentDiv">
+                        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 placesImgDiv">
+                        <!--   <img src="{{place.icon}}" height="100%" width="100%"> -->
+                        </div>
+
+                        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 placesNameDiv">
+                          {{place.name}}
+                        </div>
+
+                        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 placesRatingDiv">
+                        {{place.rating}}
+                        </div>
+
+                        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 placesVicinityDiv">
+                        {{place.vicinity}}
+                        </div> <!--placesContentDiv -->
+                      </div> <!-- placeObjDiv-->
+                    </div> <!-- placesDataRow-->
+                 </div> <!-- placeObjDiv-->
+              </div>  <!-- objDiv-->
+
+              <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 mapDiv">
+                <div id="map-canvas" class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                  <!-- map -->
+                </div>
+              </div><!-- mapDiv -->
+            </div> <!-- row -->
+          </div><!-- placesDiv -->
+        </div><!--row -->
+      </div> <!--secondOh -->
+    </div> <!--row -->
+  </div><!--firstOh -->
+</div>

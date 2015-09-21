@@ -1,0 +1,34 @@
+<div class="container-fluid" ng-controller="howBoutCtrl">
+  <div class= "col-md-12 firstHowBout">
+    <div class="row">
+      <div class= "col-md-12 secondHowBout">
+        <div class="col-md-12 searchBarDiv">
+          <!-- <input data-fittext id="searchTextField" class="searchBar" type="text" onFocus="geolocate()" placeholder="Search"> -->
+          <input id="pac-input" class="controls" type="text" placeholder="Search Box" ng-init="initAutocomplete()">
+        </div> <!--searchHowBoutDiv -->
+          <div id="map"></div>
+          <!-- <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 placeObjDiv" ng-init="initAutocomplete()" ng-repeat="place in places">
+                    <div class="row placesDataRow">
+                      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 placesContentDiv">
+                        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 placesImgDiv">
+                          <img src="{{place.icon}}" height="100%" width="100%">
+                        </div>
+
+                        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 placesNameDiv">
+                          {{place[0].name}}
+                        </div>
+
+                        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 placesRatingDiv">
+                        {{place[0].rating}}
+                        </div>
+
+                        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 placesVicinityDiv">
+                        {{place[0].formatted_address}}
+                        </div> <!--placesContentDiv -->
+                      </div> <!-- placeObjDiv-->
+                    </div> <!-- placesDataRow-->
+                 </div> <!-- placeObjDiv--> -->
+      </div> <!--secondHowBout -->
+    </div> <!--row -->
+  </div><!--firstHowBout -->
+</div><!--container-fluid -->
