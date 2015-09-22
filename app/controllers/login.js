@@ -1,4 +1,4 @@
-app.controller("LoginCtrl", 
+ app.controller("LoginCtrl", 
   ["$scope",
   "uidHandler",
   "$location",

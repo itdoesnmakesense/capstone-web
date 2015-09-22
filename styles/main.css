@@ -124,25 +124,21 @@ body {
 
 .objDiv {
   height: 100%;
-  max-width: 485;
-  padding-left: 0; }
+  margin-top: 10px; }
 
 .placeObjDiv {
   background-color: #eee;
-  height: 85px;
+  height: 150px;
   margin: 5px 0px 5px 0;
   padding: 0; }
 
 .mapDiv {
-  height: 100%;
-  max-width: 485px;
-  padding-right: 0;
+  height: 200px;
   margin-top: 5px; }
 
 #map-canvas {
   height: 100%;
   width: 100%;
-  max-width: 485px;
   -webkit-box-shadow: -1px 2px 15px 0px #dddddd;
   -moz-box-shadow: -1px 2px 15px 0px #dddddd;
   box-shadow: -1px 2px 15px 0px #dddddd; }
@@ -159,17 +155,21 @@ body {
   border: 1px dotted red;
   height: 100%; }
 
+.placesOtherContentDiv {
+  border: 2px dotted pink;
+  height: 100%; }
+
 .placesNameDiv {
   border: 1px dotted blue;
-  height: 100%; }
+  height: 50%; }
 
 .placesRatingDiv {
   border: 1px dotted green;
-  height: 100%; }
+  height: 50%; }
 
 .placesVicinityDiv {
   border: 1px dotted yellow;
-  height: 100%; }
+  height: 50%; }
 
 .firstHowBout {
   height: 100%;
