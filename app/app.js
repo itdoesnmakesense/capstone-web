@@ -1,4 +1,4 @@
-var app = angular.module("PickApp", ['ngRoute','angular.filter','ui.bootstrap','firebase','ngFitText']);
+var app = angular.module("PickApp", ['ngRoute','angular.filter','ui.bootstrap','firebase','ngFitText','ngAnimate']);
 
 // This first part tells the app that auth is required, 
 //if the user isn't logged in it redirects to the login page
