@@ -37,74 +37,77 @@ app.controller("howBoutCtrl",
     // autocomplete = new google.maps.places.Autocomplete(input, options);
 
 
-$scope.initAutocomplete = function() {
+// $scope.initAutocomplete = function() {
 
-  $scope.map = new google.maps.Map(document.getElementById('map'), {
-    center: {lat: 36.182455, lng: -86.73563000000001},
-    zoom: 13,
-    //mapTypeId: google.maps.MapTypeId.ROADMAP
-  });
+//   $scope.map = new google.maps.Map(document.getElementById('map'), {
+//     center: {lat: 36.182455, lng: -86.73563000000001},
+//     zoom: 13,
+//     //mapTypeId: google.maps.MapTypeId.ROADMAP
+//   });
 
-  // Create the search box and link it to the UI element.
-  $scope.input = document.getElementById('pac-input');
-  $scope.searchBox = new google.maps.places.SearchBox($scope.input);
-  $scope.map.controls[google.maps.ControlPosition.TOP_LEFT].push($scope.input);
+//   // Create the search box and link it to the UI element.
+//   $scope.input = document.getElementById('pac-input');
+//   $scope.searchBox = new google.maps.places.SearchBox($scope.input);
+//   $scope.map.controls[google.maps.ControlPosition.TOP_LEFT].push($scope.input);
 
-  // Bias the SearchBox results towards current map's viewport.
-  $scope.map.addListener('bounds_changed', function() {
-    $scope.searchBox.setBounds($scope.map.getBounds());
-  });
+//   // Bias the SearchBox results towards current map's viewport.
+//   $scope.map.addListener('bounds_changed', function() {
+//     $scope.searchBox.setBounds($scope.map.getBounds());
+//   });
 
-  $scope.markers = [];
-  // [START region_getplaces]
-  // Listen for the event fired when the user selects a prediction and retrieve
-  // more details for that place.
-  $scope.searchBox.addListener('places_changed', function() {
-    $scope.places = $scope.searchBox.getPlaces();
+//   $scope.markers = [];
+//   // [START region_getplaces]
+//   // Listen for the event fired when the user selects a prediction and retrieve
+//   // more details for that place.
+//   $scope.searchBox.addListener('places_changed', function() {
+//     $scope.places = $scope.searchBox.getPlaces();
 
-    if ($scope.places.length === 0) {
-      return;
-    }
+//     if ($scope.places.length === 0) {
+//       return;
+//     }
 
-    // Clear out the old markers.
-    $scope.markers.forEach(function(marker) {
-      marker.setMap(null);
-    });
-    $scope.markers = [];
+//     // Clear out the old markers.
+//     $scope.markers.forEach(function(marker) {
+//       marker.setMap(null);
+//     });
+//     $scope.markers = [];
 
-    // For each place, get the icon, name and location.
-    $scope.bounds = new google.maps.LatLngBounds();
-    $scope.places.forEach(function(place) {
-      var icon = {
-        url: place.icon,
-        size: new google.maps.Size(71, 71),
-        origin: new google.maps.Point(0, 0),
-        anchor: new google.maps.Point(17, 34),
-        scaledSize: new google.maps.Size(25, 25)
-      };
+//     // For each place, get the icon, name and location.
+//     $scope.bounds = new google.maps.LatLngBounds();
+//     $scope.places.forEach(function(place) {
+//       var icon = {
+//         url: place.icon,
+//         size: new google.maps.Size(71, 71),
+//         origin: new google.maps.Point(0, 0),
+//         anchor: new google.maps.Point(17, 34),
+//         scaledSize: new google.maps.Size(25, 25)
+//       };
 
-      // Create a marker for each place.
-      $scope.markers.push(new google.maps.Marker({
-        map: map,
-        icon: icon,
-        title: place.name,
-        position: place.geometry.location
-      }));
-      //console.log($scope.markers);
-      console.log($scope.places[0].name);
-      //console.log($scope.bounds);
+//       // Create a marker for each place.
+//       $scope.markers.push(new google.maps.Marker({
+//         map: map,
+//         icon: icon,
+//         title: place.name,
+//         position: place.geometry.location
+//       }));
+//       //console.log($scope.markers);
+//       console.log($scope.places[0].name);
+//       //console.log($scope.bounds);
 
-      if (place.geometry.viewport) {
-        // Only geocodes have viewport.
-        $scope.bounds.union(place.geometry.viewport);
-      } else {
-        $scope.bounds.extend(place.geometry.location);
-      }
-    });
-    $scope.map.fitBounds($scope.bounds);
-  });
-  // [END region_getplaces]
-};
+//       if (place.geometry.viewport) {
+//         // Only geocodes have viewport.
+//         $scope.bounds.union(place.geometry.viewport);
+//       } else {
+//         $scope.bounds.extend(place.geometry.location);
+//       }
+//     });
+//     $scope.map.fitBounds($scope.bounds);
+//   });
+//   // [END region_getplaces]
+// };
+   
+
+
 
 
 

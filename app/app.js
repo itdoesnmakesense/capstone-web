@@ -16,7 +16,7 @@ app.run(["$rootScope", "$location", function($rootScope, $location) {
 
 
 app.config(['$routeProvider',
-  function($routeProvider){
+  function($routeProvider, $hammerDefaultOptsProvider){
     $routeProvider
      .when('/login',{
         templateUrl : "partials/login.html",
@@ -37,5 +37,9 @@ app.config(['$routeProvider',
       .otherwise({
         redirectTo: '/login'
       });
+    //   $hammerDefaultOptsProvider.set({
+    //     recognizers: [[Hammer.Tap, {time: 250}],
+    //                   [Hammer.Pan,{enable: true}]]
+    // });
   }
   ]);

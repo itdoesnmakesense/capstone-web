@@ -16,47 +16,39 @@
               </a>
             </div>
           </div><!--optionsCol -->
-       
+
           <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 placesDiv">
             <div class="row placesRowMargin">
-              <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 mapDiv">
+              <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 mapDiv" ng-hide="true">
                 <div id="map-canvas" class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                   <!-- map -->
                 </div>
               </div><!-- mapDiv -->
-              <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 objDiv">
-                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 placeObjDiv" ng-model="numLimit"  ng-init="handleNearBySearchResults()" ng-repeat="detail in allDetails | limitTo:numLimit | orderBy:predicate:reverse">
+              <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 objDiv">   
+                <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12" ng-model="numLimit"  ng-init="handleNearBySearchResults()" ng-repeat="detail in allDetails | limitTo:numLimit | orderBy:predicate:reverse" ng-click="moreInfo()" ng-mouseenter ="showInfo='css-class'; hover=false" ng-mouseleave="showInfo='!css-class'; hover=true" ng-dblclick="remove(item)">
+                  <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 placeObjDiv" ng-class="showInfo" ng-style="myStyle">
                     <div class="row placesDataRow">
                       <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 placesContentDiv">
-                        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 placesImgDiv">
-                          <img src="{{detail.url}}" height="100%" width="100%">
-                        </div>
-                         <div class="col-lg-9 col-md-9 col-sm-9 col-xs-9 placesOtherContentDiv">
                           <div class="row">
-                            <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8 placesNameDiv">
-                              {{detail.name}}
-                            {{detail.formatted_address}}
-                            {{detail.formatted_phone_number}}
-                               {{detail.website}}
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 placesNameDiv">
+                              <h1 data-fittext=".8" data-fittext-min="16" data-fittext-max="25" class="detailName">{{detail.name}}</h1>
                             </div>
-
-                            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 placesRatingDiv">
-                            {{detail.rating}}
-                        
-                            </div>
+                              <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 placesDetailsDiv" ng-class="showDetails; {hidden: hover}">
+                              <p class="detailAddress">{{detail.formatted_address}}</p>
+                              <p class="detailNumber">{{detail.formatted_phone_number}}</p>
+                                <p class="detailWebsite"> {{detail.website}}</p>
+                              </div>                            
                           </div>
                           <div class="row">
-                            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 placesVicinityDiv">
-                              <p>comments</p>
-                              {{detail.reviews[i].author_name}}
-                            {{detail.reviews.rating}}
-                            {{detail.reviews.text}}
-                            </div> <!-- -->
-                          </div>
-                        </div> <!-- otherContentDiv-->
+                             <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 placesRatingDiv pull-right">
+                              <p data-fittext=".8" data-fittext-min="12" data-fittext-max="16">{{detail.rating}}</p>
+                            </div>
+                          </div> <!-- -->
                       </div> <!-- placesContentDiv-->
                     </div> <!-- placesDataRow-->
+               </div>
                  </div> <!-- placeObjDiv-->
+              
               </div>  <!-- objDiv-->
 
             </div> <!-- row -->

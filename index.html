@@ -1,8 +1,7 @@
 <html>
 <head>
   <meta charset="utf-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-
+      <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no", minimal-ui>
       <link rel="stylesheet" type="text/css" href="./lib/www/lib/bootstrap/dist/css/bootstrap.min.css">
       <link rel="stylesheet" type="text/css" href="styles/main.css">
       <link href='http://fonts.googleapis.com/css?family=Lato:i|300,400,700' rel='stylesheet' type='text/css'>
@@ -42,7 +41,6 @@
 
 <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDVQX4JVqkEhaWNbkof9bOAABRYyAJ_8r8&libraries=places&callback=initAutocomplete"></script>
 
-
 <script src="lib/www/lib/angular/angular.min.js"></script>
 <script src="lib/www/lib/firebase/firebase.js"></script>
 <script src="lib/www/lib/angularfire/dist/angularfire.min.js"></script>
@@ -51,7 +49,10 @@
 <script src="lib/www/lib/angular-bootstrap/ui-bootstrap.min.js"></script>
 <script src="lib/www/lib/jquery/dist/jquery.min.js"></script>
 <script src="lib/www/lib/ngFitText/src/ng-FitText.js"></script>
-<script src="lib/www/lib/oauth-signature/dist/oauth-signature.min.js"></script>
+<!-- <script src="lib/www/lib/hammerjs/hammer.js"></script>
+<script src="lib/www/lib/AngularHammer/angular.hammer.js"></script> 
+<script src="lib/www/lib/angular-gestures/gestures.min.js"></script> -->
+<script src="lib/www/lib/angular-touch/angular-touch.min.js"></script> 
 <script src="app/app.js"></script>
 <script src="app/controllers/login.js"></script>
 <script src="app/controllers/howBout.js"></script>
@@ -62,6 +63,7 @@
 <script src="app/factories/uid-handler.js"></script>
 <script src="app/factories/detailsAPI.js"></script>
 <script src="app/factories/geoLocate.js"></script>
+
 <!-- <script src="app/factories/album_storage.js"></script>
 <script src="app/filters/capitalize.js"></script> -->
 </body>

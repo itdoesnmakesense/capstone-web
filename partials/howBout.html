@@ -1,34 +1,32 @@
-<div class="container-fluid" ng-controller="howBoutCtrl">
-  <div class= "col-md-12 firstHowBout">
-    <div class="row">
-      <div class= "col-md-12 secondHowBout">
-        <div class="col-md-12 searchBarDiv">
-          <!-- <input data-fittext id="searchTextField" class="searchBar" type="text" onFocus="geolocate()" placeholder="Search"> -->
-          <input id="pac-input" class="controls" type="text" placeholder="Search Box" ng-init="initAutocomplete()">
-        </div> <!--searchHowBoutDiv -->
-          <div id="map"></div>
-          <!-- <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 placeObjDiv" ng-init="initAutocomplete()" ng-repeat="place in places">
+ <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 objDiv">   
+                  <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 placeObjDiv" ng-model="numLimit"  ng-init="handleNearBySearchResults()" ng-repeat="detail in allDetails | limitTo:numLimit | orderBy:predicate:reverse">
                     <div class="row placesDataRow">
                       <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 placesContentDiv">
-                        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 placesImgDiv">
-                          <img src="{{place.icon}}" height="100%" width="100%">
-                        </div>
+                        
+                          <div class="row">
+                            <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8 placesNameDiv">
+                            <p class="detailName">{{detail.name}}</p>
+                            <p class="detailAddress">{{detail.formatted_address}}</p>
+                            <p class="detailNumber">{{detail.formatted_phone_number}}</p>
+                              <p class="detailWebsite"> {{detail.website}}</p>
+                            </div>
 
-                        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 placesNameDiv">
-                          {{place[0].name}}
-                        </div>
-
-                        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 placesRatingDiv">
-                        {{place[0].rating}}
-                        </div>
-
-                        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 placesVicinityDiv">
-                        {{place[0].formatted_address}}
-                        </div> <!--placesContentDiv -->
-                      </div> <!-- placeObjDiv-->
+                            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 placesRatingDiv">
+                            {{detail.rating}}
+                        
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 placesVicinityDiv">
+                              <p>comments</p>
+                              {{detail.reviews[i].author_name}}
+                            {{detail.reviews.rating}}
+                            {{detail.reviews.text}}
+                            </div> <!-- -->
+                          </div>
+                       
+                      </div> <!-- placesContentDiv-->
                     </div> <!-- placesDataRow-->
-                 </div> <!-- placeObjDiv--> -->
-      </div> <!--secondHowBout -->
-    </div> <!--row -->
-  </div><!--firstHowBout -->
-</div><!--container-fluid -->
+                 </div> <!-- placeObjDiv-->
+               
+              </div>  <!-- objDiv-->

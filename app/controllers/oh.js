@@ -5,14 +5,33 @@ app.controller("ohCtrl",
 
 
 
-  $scope.numLimit = 5;
+  $scope.numLimit = 20;
   $scope.predicate = 'rating';
   $scope.reverse = true;
+  $scope.allPlaceIds = [];
+  $scope.allDetails = [];
+  $scope.showDetails= true;
+
+
   $scope.order = function(predicate) {
       $scope.reverse = ($scope.predicate === predicate) ? !$scope.reverse : false;
       $scope.predicate = predicate;
       };
 
+
+$scope.moreInfo = function(){
+  var rand = $scope.allDetails[Math.floor(Math.random() * $scope.allDetails.length)];
+ console.log("Did this work?", rand);
+ console.log("click");
+}; // end moreInfo
+
+
+$scope.remove = function(item){
+    var byeGurlBye = $scope.allDetails.splice(-1, 1);
+    console.log("remove", byeGurlBye);
+    console.log($scope.allDetails);
+
+};
 
  $scope.local = function(){
    
@@ -58,7 +77,6 @@ app.controller("ohCtrl",
             $scope.nearByService.nearbySearch(request, $scope.handleNearBySearchResults);
         };
 
-        $scope.allPlaceIds = [];
 
         $scope.handleNearBySearchResults = function(results, status) {
           //console.log(results[0]);
@@ -98,7 +116,6 @@ app.controller("ohCtrl",
               $scope.addInfoWindow(marker, latLng, content);
           };
 
-          $scope.allDetails = [];
 
           $scope.getMoreInfo = function(){
            // console.log('clikc');
@@ -114,8 +131,8 @@ app.controller("ohCtrl",
                 
                   $scope.allDetails.push(data.result);
                 
-                  console.log($scope.allDetails);
-                
+                  //console.log($scope.allDetails);
+
               }).
               error(function(data, status, headers, config) {
                 // log error
@@ -138,5 +155,7 @@ app.controller("ohCtrl",
         
             });
         };
+
+
  
   } ]);
