@@ -1,16 +1,18 @@
 app.controller("ohCtrl", 
   ["$scope",
   "$http",
-  function($scope, $http) {
+  "$window",
+  function($scope, $http, $window) {
 
 
-
+//console.log( "App Loaded!", $scope );
   $scope.numLimit = 20;
   $scope.predicate = 'rating';
   $scope.reverse = true;
   $scope.allPlaceIds = [];
   $scope.allDetails = [];
   $scope.showDetails= true;
+  $scope.mouse = [];
 
 
   $scope.order = function(predicate) {
@@ -19,21 +21,33 @@ app.controller("ohCtrl",
       };
 
 
+
 $scope.moreInfo = function(){
-  var rand = $scope.allDetails[Math.floor(Math.random() * $scope.allDetails.length)];
- console.log("Did this work?", rand);
- console.log("click");
+  var details = $scope.allDetails;
+  var rand = details[Math.floor(Math.random() * details.length)];
+ console.log("winner", rand);
+for (var i = 0; i < details.length; i++) {
+    if (details[i] != rand) {
+     var bye = details.splice(i--, 1);
+      console.log("not equal", bye);
+    } else {
+      console.log("equal",details[i]);
+    }
+}
+
 }; // end moreInfo
 
 
-$scope.remove = function(item){
-    var byeGurlBye = $scope.allDetails.splice(-1, 1);
-    console.log("remove", byeGurlBye);
-    console.log($scope.allDetails);
+$scope.remove = function(detail){
+  //console.log(detail);
+  var index = $scope.allDetails.indexOf(detail);
+    var byeGurlBye = $scope.allDetails.splice(index, 1);
+    //console.log("remove", byeGurlBye);
+   //console.log(index);
 
 };
 
- $scope.local = function(){
+ //$scope.local = function(){
    
       if("geolocation" in navigator) {
         navigator.geolocation.getCurrentPosition(function(position) {
@@ -45,13 +59,13 @@ $scope.remove = function(item){
           //Creating a new object for using latitude and longitude values with Google map.
           var latLng = new google.maps.LatLng(latitude, longitude);
 
-          $scope.showMap(latLng);
-          $scope.createMarker(latLng);
-          $scope.addNearByPlaces(latLng);
+            $scope.showMap(latLng);
+            $scope.createMarker(latLng);
+            $scope.addNearByPlaces(latLng);
 
           });
         }
-      };
+     // };
 
         $scope.showMap = function(latLng) {
             //Setting up the map options like zoom level, map type.
@@ -65,6 +79,8 @@ $scope.remove = function(item){
             $scope.map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
             //console.log("show");
         };
+
+
           
         $scope.addNearByPlaces = function(latLng) {
           $scope.nearByService = new google.maps.places.PlacesService($scope.map);

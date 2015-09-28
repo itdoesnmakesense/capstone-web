@@ -1,3 +1,38 @@
 <div class="container-fluid" ng-controller="winCtrl">
-<div> HEY OMG</div>
+
+  <p> hey hi hello yo whats up</p>
+<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 objDiv">   
+                <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 bouncy-slide-down" ng-model="numLimit"  ng-init="handleNearBySearchResults()" ng-repeat="detail in allDetails | limitTo:numLimit | orderBy:predicate:reverse"  ng-dblclick="remove(detail)" ng-mouseenter ="showInfo='css-class'; hover=false" ng-mouseleave="showInfo='!css-class'; hover=true">
+                  <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 placeObjDiv" ng-class="showInfo" ng-style="myStyle">
+                    <div class="row placesDataRow">
+                      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 placesContentDiv">
+                        <div class="row">
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 placesNameDiv">
+                              <h1 data-fittext=".8" data-fittext-min="16" data-fittext-max="25" class="detailName">{{detail.name}}</h1>
+                            </div>
+                              <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 placesDetailsDiv hidden" ng-class="showDetails; {hidden: hover}">
+                                <div class="row">
+                                  <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 mapDiv">
+                                    <div id="map-canvas" class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                      <img src="../img/map_ex.jpg" height="100%" width="100%">
+                                    </div>
+                                  </div><!-- mapDiv -->
+                                  <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 formattedDiv">
+                                    <p class="detailAddress">{{detail.formatted_address}}</p>
+                                    <p class="detailNumber">{{detail.formatted_phone_number}}</p>
+                                      <p class="detailWebsite"> {{detail.website}}</p>
+                                  </div>
+                                </div> <!--row div -->
+                              </div>  <!--placesDetaildiv -->                          
+                             <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 placesRatingDiv pull-right">
+                              <p data-fittext=".8" data-fittext-min="12" data-fittext-max="16">{{detail.rating}}</p>
+                            </div>
+                        </div>
+                      </div> <!-- placesContentDiv-->
+                    </div> <!-- placesDataRow-->
+               </div>
+                 </div> <!-- placeObjDiv-->
+              
+              </div>  <!-- objDiv-->
+
 </div>

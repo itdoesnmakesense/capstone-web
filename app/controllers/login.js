@@ -23,7 +23,7 @@
         console.log("Authenticated successfully with payload:", authData);
         console.log("uid", authData.uid);
         uidHandler.setUid(authData.uid);
-        window.location.href="#/main";
+        window.location.href="#/oh";
 
         }
     });

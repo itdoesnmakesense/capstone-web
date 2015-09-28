@@ -27,19 +27,19 @@
 </script>
 
 
+<route-loading-indicator />
 
-
-<div ng-view></div>
-
-
-
+<div ng-if='!isRouteLoading'ng-view></div>
 
 
 
 
 
 
-<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDVQX4JVqkEhaWNbkof9bOAABRYyAJ_8r8&libraries=places&callback=initAutocomplete"></script>
+
+
+
+<script async defer the src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDVQX4JVqkEhaWNbkof9bOAABRYyAJ_8r8&libraries=places&callback=initAutocomplete"></script>
 
 <script src="lib/www/lib/angular/angular.min.js"></script>
 <script src="lib/www/lib/firebase/firebase.js"></script>
@@ -62,6 +62,7 @@
 <script src="app/factories/uid-handler.js"></script>
 <script src="app/factories/detailsAPI.js"></script>
 <script src="app/factories/geoLocate.js"></script>
+<script src="app/directive/splash.js"></script>
 
 <!-- <script src="app/factories/album_storage.js"></script>
 <script src="app/filters/capitalize.js"></script> -->

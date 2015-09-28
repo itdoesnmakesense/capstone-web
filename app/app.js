@@ -12,6 +12,7 @@ app.run(["$rootScope", "$location", function($rootScope, $location) {
   });
 }]);
 
+   
 
 
 
@@ -33,6 +34,10 @@ app.config(['$routeProvider',
         .when('/main',{
         templateUrl : "partials/main.html",
         controller : "mainCtrl"
+      })
+        .when('/win',{
+        templateUrl : "partials/win.html",
+        controller : "winCtrl"
       })
       .otherwise({
         redirectTo: '/login'

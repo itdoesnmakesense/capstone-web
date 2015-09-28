@@ -166,6 +166,108 @@ $third-bg: url("../img/bg-2-2.png");
 }
 
 
+/* ------------------------------------------- */
+/* Flip In 
+/* ------------------------------------------- */
+
+.flip-in {
+  @include easingTimingFunction();
+
+  &.ng-enter {
+    @include transform(perspective(300px) rotateX(90deg));
+    @include transitionDuration(550ms);
+    opacity: 0.7;
+  }
+
+  &.ng-enter-active {
+    @include transform(perspective(300px) rotateX(0deg));
+    opacity: 1; 
+  }
+
+  &.ng-leave {
+    @include transform(perspective(300px) rotateX(0deg));
+    @include transitionDuration(550ms);
+    opacity: 1;
+  }
+
+  &.ng-leave-active {
+    @include transform(perspective(300px) rotateX(135deg)); 
+    opacity: 0.7; 
+  }
+
+  // Hide
+  &.ng-hide-add {
+    @include transform(perspective(300px) rotateX(0deg));
+    @include transitionDuration(550ms);
+    opacity:1;    
+  } 
+  &.ng-hide-add.ng-hide-add-active {
+    @include transform(perspective(300px) rotateX(135deg)); 
+    opacity:0;
+  }
+
+  // Show
+  &.ng-hide-remove {
+    @include transform(perspective(300px) rotateX(90deg));
+    @include transitionDuration(550ms);
+    display:block!important;
+    opacity:0;
+  }
+  &.ng-hide-remove.ng-hide-remove-active {
+    @include transform(perspective(300px) rotateX(0deg));
+    opacity:1;
+  }
+}
+
+.slide-top {
+  @include easingTimingFunction();
+  &.ng-enter {
+    @include transform(translateY(60px)); 
+    @include transitionDuration(250ms);
+    opacity: 0;
+  }
+
+  &.ng-enter-active {
+    @include transform(translateY(0));
+    opacity: 1; 
+  }
+
+  &.ng-leave {
+    @include transform(translateY(0));
+    @include transitionDuration(250ms);
+    opacity: 1;
+  }
+
+  &.ng-leave-active {
+    @include transform(translateY(60px)); 
+    opacity: 0; 
+  }
+
+  // Hide
+  &.ng-hide-add {
+    @include transform(translateY(0));
+    @include transitionDuration(250ms);
+    opacity:1;    
+  } 
+  &.ng-hide-add.ng-hide-add-active {
+    @include transform(translateY(60px)); 
+    opacity:0;
+  }
+
+  // Show
+  &.ng-hide-remove {
+    @include transform(translateY(60px)); 
+    @include transitionDuration(250ms);
+    display:block!important;
+    opacity:0;
+  }
+  &.ng-hide-remove.ng-hide-remove-active {
+    @include transform(translateY(0));
+    opacity:1;
+  }
+}
+
+
 /////////
 
 body{
@@ -302,20 +404,12 @@ margin-left:12.5%;
  //border: 5px dotted black;
   height: 15%; 
   max-height: 160px;
- width: 100%;
- padding: 0;
-}
-.ohLocalBtnDiv{
+  width: 100%;
   padding-right:5px;
   padding-left: 0;
-  max-width: 485px;
-  
+  //max-width: 485px;
 }
-.ohPopBtnDiv{
-  padding-right: 0;
-  padding-left: 5px;
-  max-width:485px;
-}
+
 .ohBtns{
  // border: 1px dotted red;
  height: 100%; 
@@ -351,7 +445,7 @@ margin-left:12.5%;
 .placeObjDiv{
   //border: 2px dotted red;
   background-color: #eee;
-  height: 150px;
+  height: 240px;
   margin: 10px 0px 10px 0;
   padding:0;
    -webkit-box-shadow: 3px 4px 5px 0px rgba(0,0,0,0.62);
@@ -360,8 +454,11 @@ margin-left:12.5%;
   position: relative;
 }
 .mapDiv{
-  //border: 2px dotted black;
-   height: 200px;
+    //border: 2px dotted black;
+   height: 100%;
+   width: 100%;
+   max-height: 180px;
+   padding: 0;
   //max-width: 485px;
   //padding-right: 0;
   margin-top: 5px;
@@ -371,11 +468,12 @@ margin-left:12.5%;
   //margin-top: 5%;
   height: 100% ;
   width:100%;
+  padding: 0;
   //max-height: 300px;
   //max-width: 485px;
-  -webkit-box-shadow: -1px 2px 15px 0px rgba(221,221,221,1);
-  -moz-box-shadow: -1px 2px 15px 0px rgba(221,221,221,1);
-  box-shadow: -1px 2px 15px 0px rgba(221,221,221,1);
+ // -webkit-box-shadow: -1px 2px 15px 0px rgba(221,221,221,1);
+  // -moz-box-shadow: -1px 2px 15px 0px rgba(221,221,221,1);
+  // box-shadow: -1px 2px 15px 0px rgba(221,221,221,1);
 }
 .placesDataRow{
  // border: 1px dotted black;
@@ -397,21 +495,27 @@ margin-left:12.5%;
 }
 .placesNameDiv{
   //border: 1px dotted blue;
-  height: 75%;
+  height: 25%;
+  max-height: 90px;
+  min-height:90px;
 }
 .detailName{
   //border: 1px dotted red;
   height:100%;
   width:100%;
+  margin-top: 10px;
 }
 .detailAddress{
   //border: 1px dotted yellow;
+  font-size: 11px;
 }
 .detailNumber{
+ font-size: 11px;
   //border: 1px dotted pink;
 }
 .detailWebsite{
   //border: 1px dotted green;
+  font-size: 11px;
 }
 
 .placesRatingDiv{
@@ -428,32 +532,33 @@ margin-left:12.5%;
   height: 200px;
 }
 
-///animate div size ex
-.css-class-add, .css-class-remove {
-  -webkit-transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.5s;
-  -moz-transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.5s;
-  -o-transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.5s;
-  transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.5s;
-}
+// ///animate div size ex
+// .css-class-add, .css-class-remove {
+//   -webkit-transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.5s;
+//   -moz-transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.5s;
+//   -o-transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.5s;
+//   transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.5s;
+// }
 
-.css-class,
-.css-class-add.css-class-add-active {
-  height:240px;
-  width: 360px;
-  position: relative;
-  z-index: 1;
-}
+// .css-class,
+// .css-class-add.css-class-add-active {
+//   height:240px;
+//   width: 100%;
+//   position: relative;
+//   z-index: 1;
+//   transition-delay: 1s;
+// }
 
-.css-class-remove.css-class-remove-active {
-  font-size:1.0em;
-  color:black;
-}
+// .css-class-remove.css-class-remove-active {
+//   font-size:1.0em;
+//   color:black;
+// }
 
 
-/// show hidden details
-.hidden-details{
-  border: 1px dotted red;
-}
+// /// show hidden details
+// .hidden:hover {
+//   transition-delay: 1s;
+// }
 
 
 
