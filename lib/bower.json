@@ -19,10 +19,10 @@
     "angular-gestures": "~0.3.1",
     "angular-route": "~1.4.4",
     "angular-touch": "~1.4.6",
-    "AngularHammer": "ryanmullins-angular-hammer#~2.1.10",
     "bootstrap": "~3.3.5",
+    "include-media": "~1.4.1",
     "jquery": "~2.1.4",
-    "left-swipe-action": "~0.2.1"
+    
   },
   "resolutions": {
     "angular": "1.4.6"

@@ -4,10 +4,15 @@
       <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no", minimal-ui>
       <link rel="stylesheet" type="text/css" href="./lib/www/lib/bootstrap/dist/css/bootstrap.min.css">
       <link rel="stylesheet" type="text/css" href="styles/main.css">
+      <link rel="stylesheet" type="text/css" href="styles/animations.css">
+      <link rel="stylesheet" type="text/css" media="only screen and (min-width:768px) and (max-width:980px)" href="styles/style_768.css">
+      <link rel="stylesheet" type="text/css" media="only screen and (min-width:600px) and (max-width:767px)" href="styles/style_600.css">
+      <link rel="stylesheet" type="text/css" media="only screen and (min-width:300px) and (max-width:599px)" href="styles/style_300.css">
       <link href='http://fonts.googleapis.com/css?family=Lato:i|300,400,700' rel='stylesheet' type='text/css'>
   <title>Capstone</title>
 </head>
 <body  ng-app="PickApp">
+
   <script>
   window.fbAsyncInit = function() {
     FB.init({
@@ -27,9 +32,9 @@
 </script>
 
 
-<route-loading-indicator />
 
-<div ng-if='!isRouteLoading'ng-view></div>
+
+<div ng-view></div>
 
 
 

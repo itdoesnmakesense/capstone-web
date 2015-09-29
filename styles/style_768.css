@@ -1,0 +1,148 @@
+body {
+  overflow-x: hidden; }
+
+.first {
+  height: 100%;
+  width: 100%; }
+
+.second {
+  background-color: rgba(74, 191, 203, 0.98);
+  -webkit-box-shadow: 3px 4px 5px 0px rgba(0, 0, 0, 0.62);
+  -moz-box-shadow: 3px 4px 5px 0px rgba(0, 0, 0, 0.62);
+  box-shadow: 3px 4px 5px 0px rgba(0, 0, 0, 0.62);
+  height: 100%;
+  max-height: 500px;
+  max-width: 600px;
+  min-width: 350px;
+  margin-top: 5%; }
+
+.appName {
+  height: 75%;
+  max-height: 360px;
+  min-height: 255px;
+  padding: 0; }
+
+.loginPageBtns {
+  height: 100%;
+  width: 100%;
+  max-height: 160px;
+  min-width: 160px;
+  padding: 0;
+  border-radius: 0;
+  background-color: #E1888A;
+  border-color: #9E6063;
+  text-align: center;
+  -webkit-box-shadow: 3px 4px 5px 0px rgba(0, 0, 0, 0.62);
+  -moz-box-shadow: 3px 4px 5px 0px rgba(0, 0, 0, 0.62);
+  box-shadow: 3px 4px 5px 0px rgba(0, 0, 0, 0.62); }
+
+#loginText {
+  line-height: 160px !important; }
+
+.fbLogin {
+  height: 180px; }
+
+.quickLogin {
+  height: 180px; }
+
+.firstOh {
+  height: 700px;
+  width: 100%;
+  padding: 0; }
+
+.secondOh {
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  margin: 0; }
+
+.optionsCol {
+  margin-top: 0;
+  height: 100%;
+  max-height: 180px;
+  width: 100%;
+  padding-right: 5px;
+  padding-left: 0; }
+
+.uPickBtn {
+  line-height: 1.75 !important; }
+
+.ohBtns {
+  height: 100%;
+  width: 100%;
+  border-radius: 0;
+  max-height: 180px;
+  text-align: center;
+  -webkit-box-shadow: 3px 4px 5px 0px rgba(0, 0, 0, 0.62);
+  -moz-box-shadow: 3px 4px 5px 0px rgba(0, 0, 0, 0.62);
+  box-shadow: 3px 4px 5px 0px rgba(0, 0, 0, 0.62);
+  line-height: 180px !important;
+  background-color: #E1888A;
+  border-color: #9E6063; }
+
+.placesDiv {
+  height: 85%;
+  max-height: 450px;
+  min-height: 360px;
+  padding: 0;
+  margin-top: 25px; }
+
+.placesRowMargin {
+  margin: 0; }
+
+.objDiv {
+  height: 100%;
+  margin-top: 10px; }
+
+.placeObjDiv {
+  background-color: #eee;
+  height: 180px;
+  margin: 10px 0px 10px 0;
+  padding: 0;
+  -webkit-box-shadow: 3px 4px 5px 0px rgba(0, 0, 0, 0.62);
+  -moz-box-shadow: 3px 4px 5px 0px rgba(0, 0, 0, 0.62);
+  box-shadow: 3px 4px 5px 0px rgba(0, 0, 0, 0.62);
+  position: relative; }
+
+.placesDataRow {
+  height: 100%;
+  margin: 0; }
+
+.placesContentDiv {
+  height: 100%; }
+
+.placesOtherContentDiv {
+  height: 100%; }
+
+.placesNameDiv {
+  height: 25%;
+  max-height: 90px;
+  min-height: 90px;
+  text-align: center; }
+
+.detailName {
+  height: 100%;
+  width: 100%;
+  margin-top: 10px; }
+
+.detailAddress {
+  font-size: 11px; }
+
+.detailNumber {
+  font-size: 11px; }
+
+.detailWebsite {
+  font-size: 11px; }
+
+.placesRatingDiv {
+  height: 25%;
+  padding: 0; }
+
+.placesVicinityDiv {
+  height: 25%; }
+
+.large {
+  width: 150px;
+  height: 200px; }
+
+/*# sourceMappingURL=style_768.css.map */
