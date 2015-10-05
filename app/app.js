@@ -12,6 +12,7 @@ app.run(["$rootScope", "$location", function($rootScope, $location) {
   });
 }]);
 
+
    
 
 
@@ -25,6 +26,10 @@ app.config(['$routeProvider',
       })
       .when('/oh',{
         templateUrl : "partials/oh.html",
+        controller : "ohCtrl"
+      })
+      .when('/presentation',{
+        templateUrl : "partials/presentation.html",
         controller : "ohCtrl"
       })
        .when('/howBout',{

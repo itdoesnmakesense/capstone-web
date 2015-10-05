@@ -56,7 +56,8 @@ body {
   height: 100%;
   width: 100%;
   padding: 0;
-  margin: 0; }
+  margin: 0;
+  min-height: 3000px !important; }
 
 .uPickBtn {
   line-height: 1.75 !important; }
@@ -113,11 +114,17 @@ body {
 .placesContentDiv {
   height: 100%; }
 
-.placesOtherContentDiv {
-  height: 100%; }
+.placesDetailsDiv {
+  display: block;
+  background-color: rgba(195, 195, 197, 0.5);
+  height: 40%;
+  text-align: center; }
 
 .placesNameDiv {
   height: 25%;
+  width: 100%;
+  min-width: 370px;
+  max-width: 570px;
   max-height: 90px;
   min-height: 90px;
   text-align: center; }
@@ -125,7 +132,8 @@ body {
 .detailName {
   height: 100%;
   width: 100%;
-  margin-top: 10px; }
+  margin-top: 10px;
+  font-size: 30px !important; }
 
 .detailAddress {
   font-size: 11px; }

@@ -111,11 +111,15 @@ body {
 .placesContentDiv {
   height: 100%; }
 
-.placesOtherContentDiv {
-  height: 100%; }
+.placesDetailsDiv {
+  display: block;
+  background-color: rgba(195, 195, 197, 0.5);
+  height: 40%; }
 
 .placesNameDiv {
   height: 25%;
+  width: 100%;
+  max-width: 275px;
   max-height: 90px;
   min-height: 90px;
   text-align: center; }
@@ -123,16 +127,19 @@ body {
 .detailName {
   height: 100%;
   width: 100%;
-  margin-top: 10px; }
+  margin-top: 10px;
+  font-size: 30px !important;
+  overflow: hidden; }
 
 .detailAddress {
-  font-size: 11px; }
+  font-size: 1em; }
 
 .detailNumber {
-  font-size: 11px; }
+  font-size: 1em; }
 
 .detailWebsite {
-  font-size: 11px; }
+  font-size: 11px;
+  overflow: hidden; }
 
 .placesRatingDiv {
   height: 25%;
@@ -144,5 +151,8 @@ body {
 .large {
   width: 150px;
   height: 200px; }
+
+.formattedDiv {
+  height: 100%; }
 
 /*# sourceMappingURL=style_768.css.map */

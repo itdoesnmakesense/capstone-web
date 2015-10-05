@@ -13,13 +13,13 @@ $third-bg: url("../img/bg-2-2.png");
 
 /////////
 
-
 body{
   background: #fff;
   //background: $secondary-bg;
   background-repeat: repeat;
   background-size: contain;
   height: 1200px;
+
 }
 
 
@@ -39,7 +39,7 @@ box-shadow: 3px 4px 5px 0px rgba(0,0,0,0.62);
 
 //border: 1px dotted blue;
 height: 100%;
-max-height: 1500px;
+max-height: 500px;
 //width: 50%;
 max-width: 600px;
 min-width: 350px;
@@ -126,6 +126,9 @@ width: 100%;
 
 
 // OH ///
+.container-fluid{
+  height:100%;
+}
 
 .firstOh{
 //border: 1px solid black;
@@ -134,7 +137,7 @@ height: 100%;
 .secondOh{
 //border: 1px dotted pink;
 height: 100%;
-max-height: 1500px;
+min-height: 1500px;
 width: 75%;
 margin-left:12.5%;
 background-color: rgba(74, 191, 203,0.98);
@@ -145,17 +148,18 @@ box-shadow: 3px 4px 5px 0px rgba(0,0,0,0.62);
 }
 
 .optionsCol{
-  margin-top: 50px;
+  margin-top: 0;
  //border: 5px dotted black;
-  height: 15%; 
-  max-height: 160px;
+  height: 100%; 
+  max-height: 180px;
   width: 100%;
-  padding-right:5px;
+  padding-right:0;
   padding-left: 0;
   //max-width: 485px;
 }
 .uPickBtn{
-  line-height: 1.75 !important;
+  line-height: 1 !important;
+  font-size: 100px !important;
 }
 .ohBtns{
  // border: 1px dotted red;
@@ -234,25 +238,25 @@ box-shadow: 3px 4px 5px 0px rgba(0,0,0,0.62);
   height:100%;
   //max-width: 485px;
 }
-.placesImgDiv{
-  //border: 1px dotted red;
-  height: 100%;
+.placesDetailsDiv{
+  display: none;
 }
-.placesOtherContentDiv {
-  //border: 2px dotted pink;
-  height: 100%;
-}
+
 .placesNameDiv{
   //border: 1px dotted blue;
-  height: 25%;
-  max-height: 90px;
+  height: 100%;
+  width: 100%;
+  max-height: 200px;
+  max-width: 300px;
   min-height:90px;
+  padding: 5px;
 }
 .detailName{
   //border: 1px dotted red;
   height:100%;
   width:100%;
   margin-top: 10px;
+  overflow-wrap: break-word;
 }
 .detailAddress{
   //border: 1px dotted yellow;
@@ -265,6 +269,7 @@ box-shadow: 3px 4px 5px 0px rgba(0,0,0,0.62);
 .detailWebsite{
   //border: 1px dotted green;
   font-size: 11px;
+  overflow-wrap: break-word;
 }
 
 .placesRatingDiv{

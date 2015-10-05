@@ -14,7 +14,7 @@ body {
   -moz-box-shadow: 3px 4px 5px 0px rgba(0, 0, 0, 0.62);
   box-shadow: 3px 4px 5px 0px rgba(0, 0, 0, 0.62);
   height: 100%;
-  max-height: 1500px;
+  max-height: 500px;
   max-width: 600px;
   min-width: 350px;
   margin-top: 5%; }
@@ -77,12 +77,15 @@ body {
   margin: 0;
   line-height: 300px; }
 
+.container-fluid {
+  height: 100%; }
+
 .firstOh {
   height: 100%; }
 
 .secondOh {
   height: 100%;
-  max-height: 1500px;
+  min-height: 1500px;
   width: 75%;
   margin-left: 12.5%;
   background-color: rgba(74, 191, 203, 0.98);
@@ -91,15 +94,16 @@ body {
   box-shadow: 3px 4px 5px 0px rgba(0, 0, 0, 0.62); }
 
 .optionsCol {
-  margin-top: 50px;
-  height: 15%;
-  max-height: 160px;
+  margin-top: 0;
+  height: 100%;
+  max-height: 180px;
   width: 100%;
-  padding-right: 5px;
+  padding-right: 0;
   padding-left: 0; }
 
 .uPickBtn {
-  line-height: 1.75 !important; }
+  line-height: 1 !important;
+  font-size: 100px !important; }
 
 .ohBtns {
   height: 100%;
@@ -157,21 +161,22 @@ body {
 .placesContentDiv {
   height: 100%; }
 
-.placesImgDiv {
-  height: 100%; }
-
-.placesOtherContentDiv {
-  height: 100%; }
+.placesDetailsDiv {
+  display: none; }
 
 .placesNameDiv {
-  height: 25%;
-  max-height: 90px;
-  min-height: 90px; }
+  height: 100%;
+  width: 100%;
+  max-height: 200px;
+  max-width: 300px;
+  min-height: 90px;
+  padding: 5px; }
 
 .detailName {
   height: 100%;
   width: 100%;
-  margin-top: 10px; }
+  margin-top: 10px;
+  overflow-wrap: break-word; }
 
 .detailAddress {
   font-size: 11px; }
@@ -180,7 +185,8 @@ body {
   font-size: 11px; }
 
 .detailWebsite {
-  font-size: 11px; }
+  font-size: 11px;
+  overflow-wrap: break-word; }
 
 .placesRatingDiv {
   height: 25%;

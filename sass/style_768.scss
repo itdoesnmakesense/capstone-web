@@ -25,6 +25,7 @@ width: 100%;
 
 }
 .second{
+
 background-color: rgba(74, 191, 203,0.98);
 -webkit-box-shadow: 3px 4px 5px 0px rgba(0,0,0,0.62);
 -moz-box-shadow: 3px 4px 5px 0px rgba(0,0,0,0.62);
@@ -165,14 +166,16 @@ margin: 0;
   height:100%;
   //max-width: 485px;
 }
-
-.placesOtherContentDiv {
-  //border: 2px dotted pink;
-  height: 100%;
+.placesDetailsDiv{
+  display: block;
+  background-color: rgba(195, 195, 197, 0.5);
+  height: 40%;
 }
 .placesNameDiv{
   //border: 1px dotted blue;
   height: 25%;
+  width: 100%;
+  max-width: 275px;
   max-height: 90px;
   min-height:90px;
   text-align: center;
@@ -182,18 +185,21 @@ margin: 0;
   height:100%;
   width:100%;
   margin-top: 10px;
+  font-size: 30px !important;
+  overflow: hidden;
 }
 .detailAddress{
   //border: 1px dotted yellow;
-  font-size: 11px;
+  font-size: 1em;
 }
 .detailNumber{
- font-size: 11px;
+ font-size: 1em;
   //border: 1px dotted pink;
 }
 .detailWebsite{
   //border: 1px dotted green;
   font-size: 11px;
+  overflow: hidden;
 }
 
 .placesRatingDiv{
@@ -208,4 +214,7 @@ margin: 0;
 .large{
   width: 150px;
   height: 200px;
+}
+.formattedDiv{
+  height:100%;
 }
