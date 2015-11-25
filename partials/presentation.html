@@ -20,27 +20,76 @@
   </head>
   
   <style>
+  body{
+    height: 2000px;
+    background: rgba(8,171,253,0.93);
+background: -moz-linear-gradient(top, rgba(8,171,253,0.93) 0%, rgba(8,171,253,0.94) 9%, rgba(46,186,229,0.97) 55%, rgba(189,224,239,0.99) 91%, rgba(189,224,239,1) 100%);
+background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(8,171,253,0.93)), color-stop(9%, rgba(8,171,253,0.94)), color-stop(55%, rgba(46,186,229,0.97)), color-stop(91%, rgba(189,224,239,0.99)), color-stop(100%, rgba(189,224,239,1)));
+background: -webkit-linear-gradient(top, rgba(8,171,253,0.93) 0%, rgba(8,171,253,0.94) 9%, rgba(46,186,229,0.97) 55%, rgba(189,224,239,0.99) 91%, rgba(189,224,239,1) 100%);
+background: -o-linear-gradient(top, rgba(8,171,253,0.93) 0%, rgba(8,171,253,0.94) 9%, rgba(46,186,229,0.97) 55%, rgba(189,224,239,0.99) 91%, rgba(189,224,239,1) 100%);
+background: -ms-linear-gradient(top, rgba(8,171,253,0.93) 0%, rgba(8,171,253,0.94) 9%, rgba(46,186,229,0.97) 55%, rgba(189,224,239,0.99) 91%, rgba(189,224,239,1) 100%);
+background: linear-gradient(to bottom, rgba(8,171,253,0.93) 0%, rgba(8,171,253,0.94) 9%, rgba(46,186,229,0.97) 55%, rgba(189,224,239,0.99) 91%, rgba(189,224,239,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#08abfd', endColorstr='#bde0ef', GradientType=0 );
+  }
     .intro{
-      border: 1px solid blue;
-      background-color: rgba(7,7,232, 0.61)
-      height: 50%;
+      
+      height: 40%;
+      text-align: center;
 
     }
-     .goals{
-      border: 1px solid red;
-      background-color: red;
+ 
+    .subtitle{
+    letter-spacing: 26px;
+    margin-top: 0;
+    margin-bottom: 50px;
+    line-height: 2;
+    
     }
-     .app{
-      border: 1px solid yellow;
-      background-color: yellow;
+    .nameDate{
+      font-size: 25px;
+    }
+     .goals{
+     
+      height: 35%;
+      width: 100%;
+
+    }
+    .goalsTitle{
+      margin-bottom: 15px;
+
+    }
+    ul {
+      list-style: none;
+    }
+    li{
+      font-size: 30px;
+      margin: 10px 0 10px 0;
+    }
+     .letsEat{
+  
+     margin-top: 15%;
+    }
+    img{
+      height: 226px;
+      width: 206px;
     }
      .lessonsLearned{
-      border: 1px solid green;
-      background-color: green;
+      height: 15%;
+      margin-bottom: 50px;
+      margin-top: 25%;
+     
     }
      .gracias{
-      border: 1px solid pink;
-      background-color: pink;
+       height: 15%;
+      margin-top: 50px;
+    }
+    .thanks{
+      text-align: center;
+      margin-top: 25%;
+    }
+    .questions{
+      text-align: center;
+      margin-top: 20px;
     }
     
     
@@ -57,78 +106,98 @@
       
 
       <article class="intro">
-        <h1>
-          uPick
-          <br>
-          A Dinner Decider
-        </h1>
-        <p>
-          Juan Rodriguez
-          <br>
-          October 6, 2015
-        </p>
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 title">
+          <h1 data-fittext=".8" data-fittext-min="16" data-fittext-max="200">
+            uPick
+          </h1>
+        </div>
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 subtitle">
+         <h2 data-fittext=".8" data-fittext-min="30" data-fittext-max="40">A Dinner Decider</h2>
+        </div>
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 nameDate">
+          <p>
+            Juan Rodriguez
+            <br>
+           <small> October 6, 2015</small>
+          </p>
+        </div>
       </article>
       
-      <article class="goals">
-        <h3>
-          Project Goals:
-        </h3>
-        <ul>
-          <li>
-            You should pull this from your elevator pitch
-          </li>
-          <li>
-            Aim for a few bullet points
-          </li>
-          <li>
-            Lipsum.
-          </li>
-        </ul>
+      <article class="goals pull-right">
+        
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 goalsTitle">
+          <h2 data-fittext=".8" data-fittext-min="60" data-fittext-max="70">
+            Project Goals
+          </h2>
+        </div>
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 bullets">
+          <ul>
+            <li>
+              Develop a fun and easy app to help decide where to eat.
+            </li>
+            <li>
+              Use google maps API to geolocate the user.
+            </li>
+            <li>
+              Use google place detail API to gather local restaurant information.
+            </li>
+             <li>
+              Allow User to delete a restaurant selection.
+            </li>
+             <li>
+              With a click of a button, computer randomly picks a restaurant.
+            </li>
+             <li>
+              Website needs to be mobile responsive.
+            </li>
+          </ul>
+        </div>
+
+
+         <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8 col-lg-offset-4 col-md-offset-4 col-sm-offset-4 col-xs-offset-4 letsEat">
+       <a href="#login"><p data-fittext=".8" data-fittext-min="100" data-fittext-max="110"> Let's Eat! </p></a>
+       </div>
       </article>
 
-      <article class="app">
-        <h3>
-          Demo
-        </h3>
-        <p>
-          Time for a live demo!
-        </p>
-      </article>
+ 
 
-      <article class="lessonsLearned">
-        <h3>
-          Lessons Learned:
-        </h3>
-        <ul>
-          <li>
-            You get the drill.
-          </li>
-          <li>
-            Aim for a few bullet points
-          </li>
-          <li>
-            Lipsum.
-          </li>
-        </ul>
+      <article>
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 lessonsLearned">
+          <div class="row">
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 goalsTitle">
+          <h2 data-fittext=".8" data-fittext-min="60" data-fittext-max="70">
+            Lessons Learned
+          </h2>
+        </div>
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 bullets">
+          <ul>
+            <li>
+              I'm so damn indecisive.
+            </li>
+            <li>
+              Google can help 85% of the time.
+            </li>
+            <li>
+              MVP's change.
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
       </article>
 
       
       <article class="gracias">
-        <h3>
+        <div class=" col-lg-12 col-md-12 col-sm-12 col-xs-12 thanks">
+        <h3 data-fittext=".8" data-fittext-min="60" data-fittext-max="70">
           Thank you!
         </h3>
-        
-        <p>
+        </div>
+         <div class=" col-lg-12 col-md-12 col-sm-12 col-xs-12 questions">
+        <p data-fittext=".8" data-fittext-min="40" data-fittext-max="50">
         Questions?
         </p>
-        <ul>
-          <li>
-            <a href='http://www.google.com'>myemail@example.com</a>
-          </li>
-          <li>
-            <a href='http://www.google.com'>github.com/myprojecturl</a>
-          </li>
-        </ul>
+      </div>
       </article>
 
     </section>
