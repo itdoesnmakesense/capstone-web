@@ -8,104 +8,13 @@
       <link rel="stylesheet" type="text/css" media="only screen and (min-width:768px) and (max-width:980px)" href="styles/style_768.css">
       <link rel="stylesheet" type="text/css" media="only screen and (min-width:600px) and (max-width:767px)" href="styles/style_600.css">
       <link rel="stylesheet" type="text/css" media="only screen and (min-width:300px) and (max-width:599px)" href="styles/style_300.css">
-      <link href='http://fonts.googleapis.com/css?family=Lato:i|300,400,700' rel='stylesheet' type='text/css'>
+      <link href='https://fonts.googleapis.com/css?family=Lato:i|300,400,700' rel='stylesheet' type='text/css'>
   <title>Capstone</title>
 
 </head>
 <body  ng-app="PickApp" ng-cloak>
-
-  <script>
-  window.fbAsyncInit = function() {
-    FB.init({
-      appId      : '725047404293906',
-      xfbml      : true,
-      version    : 'v2.4'
-    });
-  };
-
-  (function(d, s, id){
-     var js, fjs = d.getElementsByTagName(s)[0];
-     if (d.getElementById(id)) {return;}
-     js = d.createElement(s); js.id = id;
-     js.src = "//connect.facebook.net/en_US/sdk.js";
-     fjs.parentNode.insertBefore(js, fjs);
-   }(document, 'script', 'facebook-jssdk'));
-</script>
-
-
-
-<div ng-view ng-cloak>
- <div class="m-app-loading" ng-animate-children>
-
-        <!--
-            HACKY CODE WARNING: I'm putting Style block inside directive so that it
-            will be removed from the DOM when we remove the directive container.
-        -->
-        <style type="text/css">
-            div.m-app-loading {
-                position: fixed ;
-            }
-            div.m-app-loading div.animated-container {
-                background-color: #333333 ;
-                bottom: 0px ;
-                left: 0px ;
-                opacity: 1.0 ;
-                position: fixed ;
-                right: 0px ;
-                top: 0px ;
-                z-index: 999999 ;
-            }
-            /* Used to initialize the ng-leave animation state. */
-            div.m-app-loading div.animated-container.ng-leave {
-                opacity: 1.0 ;
-                transition: all linear 200ms ;
-                    -webkit-transition: all linear 200ms ;
-            }
-            /* Used to set the end properties of the ng-leave animation state. */
-            div.m-app-loading div.animated-container.ng-leave-active {
-                opacity: 0 ;
-            }
-            div.m-app-loading div.messaging {
-                color: #FFFFFF ;
-                font-family: monospace ;
-                left: 0px ;
-                margin-top: -37px ;
-                position: absolute ;
-                right: 0px ;
-                text-align: center ;
-                top: 50% ;
-            }
-            div.m-app-loading h1 {
-                font-size: 26px ;
-                line-height: 35px ;
-                margin: 0px 0px 20px 0px ;
-            }
-            div.m-app-loading p {
-                font-size: 18px ;
-                line-height: 14px ;
-                margin: 0px 0px 0px 0px ;
-            }
-        </style>
-
-
-        <!-- BEGIN: Actual animated container. -->
-        <div class="animated-container">
-
-            <div class="messaging">
-
-                <h1>
-                    App is Loading
-                </h1>
-
-                <img src="../img/giphy.gif">
-
-            </div>
-
-        </div>
-        <!-- END: Actual animated container. -->
-
-    </div>
-    <!-- END: App-Loading Screen. -->
+<div ng-view>
+ 
 
 
 
@@ -114,8 +23,7 @@
 
 
 
-
-<script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDVQX4JVqkEhaWNbkof9bOAABRYyAJ_8r8&libraries=places&callback=initAutocomplete"></script>
+<script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDVQX4JVqkEhaWNbkof9bOAABRYyAJ_8r8&libraries=places,geometry"></script>
 
 <script src="lib/www/lib/angular/angular.min.js"></script>
 <script src="lib/www/lib/firebase/firebase.js"></script>

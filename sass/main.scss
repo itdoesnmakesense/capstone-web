@@ -1,4 +1,4 @@
-$font-stack:    'Lato', sans-serif;
+ $font-stack:    'Lato', sans-serif;
 $primary-color: #333;
 $secondary-color: #E1888A;
 $third-color: #4ABFCB;
@@ -25,7 +25,7 @@ body{
 
 // LOG IN ////////////////////////
 .first{
-//border: 1px solid black;
+/*border: 1px solid black;*/
 height: 100%;
 width: 100%;
 
@@ -37,24 +37,22 @@ background-color: rgba(74, 191, 203,0.98);
 -moz-box-shadow: 3px 4px 5px 0px rgba(0,0,0,0.62);
 box-shadow: 3px 4px 5px 0px rgba(0,0,0,0.62);
 
-//border: 1px dotted blue;
+/*border: 1px dotted blue;*/
 height: 100%;
 max-height: 500px;
-//width: 50%;
+/*width: 50%;*/
 max-width: 600px;
 min-width: 350px;
 margin-top:5%;
 }
 .appName{
- //border: 2px dotted red;
+ /*border: 2px dotted red;*/
  height: 75%; 
  max-height:360px;
  min-height: 255px;
  padding:0;
 }
-.loginBtn{
-//something maybe
-}
+
 .loginPageBtns{
   height:100%;
   width:100%;
@@ -73,25 +71,25 @@ box-shadow: 3px 4px 5px 0px rgba(0,0,0,0.62);
   line-height: 160px !important;
 }
 .fbLogin{
-  //border: 2px dotted green;
+  /*border: 2px dotted green;*/
   height: 180px;
 }
 .quickLogin{
-  //border: 2px dotted black;
+  /*border: 2px dotted black;*/
   height: 180px;
 }
 
-// MAIN ///
+/*// MAIN ///*/
 
 .firstMain{
-//border: 1px solid black;
+/*border: 1px solid black;*/
 height: 500px;
 }
 .secondMain{
-//border: 1px dotted blue;
+/*border: 1px dotted blue;*/
 height: 100%;
 width: 100%;
-//margin-top: 15%;
+/*margin-top: 15%;*/
 }
 .idcDiv, .ummDiv{
   margin-top: 10%;
@@ -116,30 +114,26 @@ width: 100%;
   line-height: 300px;
 }
 .omgButton{
- // border: 2px dotted red;
- // height: 50%; 
+  /*border: 2px dotted red;*/
+  /*height: 50%; */
 }
 .howButton{
-  // border: 2px dotted green;
-  // height: 50%;
+   /*border: 2px dotted green;*/
+   /*height: 50%;*/
 }
 
 
-// OH ///
+/*// OH ///*/
 .container-fluid{
   height:100%;
 }
 
 .firstOh{
-//border: 1px solid black;
-height: 100%;
-}
-.secondOh{
-//border: 1px dotted pink;
+/*border: 1px dotted pink;*/
 height: 100%;
 min-height: 1500px;
-width: 75%;
-margin-left:12.5%;
+/*width: 75%;
+margin-left:12.5%;*/
 background-color: rgba(74, 191, 203,0.98);
 -webkit-box-shadow: 3px 4px 5px 0px rgba(0,0,0,0.62);
 -moz-box-shadow: 3px 4px 5px 0px rgba(0,0,0,0.62);
@@ -149,25 +143,25 @@ box-shadow: 3px 4px 5px 0px rgba(0,0,0,0.62);
 
 .optionsCol{
   margin-top: 0;
- //border: 5px dotted black;
+ /*border: 5px dotted black;*/
   height: 100%; 
   max-height: 180px;
   width: 100%;
   padding-right:0;
   padding-left: 0;
-  //max-width: 485px;
+  /*max-width: 485px;*/
 }
 .uPickBtn{
   line-height: 1 !important;
   font-size: 100px !important;
 }
 .ohBtns{
- // border: 1px dotted red;
+  /*border: 1px dotted red;*/
  height: 100%; 
  width: 100%;
  border-radius:0;
  max-height: 160px;
-  //max-width:160px;
+  /*max-width:160px;*/
    text-align: center; 
   -webkit-box-shadow: 3px 4px 5px 0px rgba(0,0,0,0.62);
   -moz-box-shadow: 3px 4px 5px 0px rgba(0,0,0,0.62);
@@ -178,7 +172,7 @@ box-shadow: 3px 4px 5px 0px rgba(0,0,0,0.62);
 }
 
 .placesDiv{
-  //border: 2px dotted black;
+  /*border: 2px dotted black;*/
   height: 85%;
   max-height:450px;
   min-height: 360px;
@@ -189,183 +183,86 @@ box-shadow: 3px 4px 5px 0px rgba(0,0,0,0.62);
   margin: 0;
 }
 .objDiv{
- // border: 2px dotted green;
-  height: 100%;
+  /*border: 2px dotted black;*/
   margin-top: 10px;
-  //max-width: 485;
-  //padding-left:0;
-}
-.placeObjDiv{
-  //border: 2px dotted red;
-  background-color: #eee;
+  /*background-color: white;*/
   height: 240px;
   margin: 10px 0px 10px 0;
+  position: relative;
+}
+.rowWidth{
+  width: 100%;
+  margin-right: 0;
+  margin-left: 0;
+}
+.placeObjDiv{
+  /*border: 2px dotted red;*/
+  background-color: #eee;
+  height: 100%;
   padding:0;
    -webkit-box-shadow: 3px 4px 5px 0px rgba(0,0,0,0.62);
   -moz-box-shadow: 3px 4px 5px 0px rgba(0,0,0,0.62);
   box-shadow: 3px 4px 5px 0px rgba(0,0,0,0.62);
   position: relative;
+  overflow: hidden;
+}
+.nameRating{
+  height:85px;
+}
+.titleDetail{
+  padding: 0 5;
+}
+.ratingDetail{
+  position: relative;
+  bottom: 60;
+  float: right;
+  margin-right: 10;
+}
+.phoneDetail{
+  padding:0;
+}
+.glyphicon-phone-alt{
+  
+}
+.websiteDetail{
+  padding:0;
 }
 .mapDiv{
-    //border: 2px dotted black;
+    /*border: 2px dotted black;*/
    height: 100%;
    width: 100%;
    max-height: 180px;
    padding: 0;
-  //max-width: 485px;
-  //padding-right: 0;
+  /*max-width: 485px;*/
+  /*padding-right: 0;*/
   margin-top: 5px;
 }
 #map-canvas { 
-  //border: 2px dotted yellow;
-  //margin-top: 5%;
+  /*border: 2px dotted yellow;*/
+  /*margin-top: 5%;*/
   height: 100% ;
   width:100%;
   padding: 0;
-  //max-height: 300px;
-  //max-width: 485px;
- // -webkit-box-shadow: -1px 2px 15px 0px rgba(221,221,221,1);
-  // -moz-box-shadow: -1px 2px 15px 0px rgba(221,221,221,1);
-  // box-shadow: -1px 2px 15px 0px rgba(221,221,221,1);
-}
-.placesDataRow{
- // border: 1px dotted black;
-  height: 100%;
-  margin: 0;
-}
-.placesContentDiv{
-  //border: 2px dotted blue;
-  height:100%;
-  //max-width: 485px;
-}
-.placesDetailsDiv{
-  display: none;
+  /*max-height: 300px;*/
+  /*max-width: 485px;*/
+  /*-webkit-box-shadow: -1px 2px 15px 0px rgba(221,221,221,1);*/
+   /*-moz-box-shadow: -1px 2px 15px 0px rgba(221,221,221,1);*/
+   /*box-shadow: -1px 2px 15px 0px rgba(221,221,221,1);*/
 }
 
-.placesNameDiv{
-  //border: 1px dotted blue;
-  height: 100%;
-  width: 100%;
-  max-height: 200px;
-  max-width: 300px;
-  min-height:90px;
-  padding: 5px;
-}
-.detailName{
-  //border: 1px dotted red;
-  height:100%;
-  width:100%;
-  margin-top: 10px;
-  overflow-wrap: break-word;
-}
-.detailAddress{
-  //border: 1px dotted yellow;
-  font-size: 11px;
-}
-.detailNumber{
- font-size: 11px;
-  //border: 1px dotted pink;
-}
-.detailWebsite{
-  //border: 1px dotted green;
-  font-size: 11px;
-  overflow-wrap: break-word;
-}
-
-.placesRatingDiv{
-  //border: 1px dotted green;
-  height: 25%;
-  padding:0;
-}
-.placesVicinityDiv{
-  //border: 1px dotted yellow;
-  height: 25%;
-}
 .large{
   width: 150px;
   height: 200px;
 }
 
-// ///animate div size ex
-// .css-class-add, .css-class-remove {
-//   -webkit-transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.5s;
-//   -moz-transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.5s;
-//   -o-transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.5s;
-//   transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.5s;
-// }
-
-// .css-class,
-// .css-class-add.css-class-add-active {
-//   height:240px;
-//   width: 100%;
-//   position: relative;
-//   z-index: 1;
-//   transition-delay: 1s;
-// }
-
-// .css-class-remove.css-class-remove-active {
-//   font-size:1.0em;
-//   color:black;
-// }
-
-
-// /// show hidden details
-// .hidden:hover {
-//   transition-delay: 1s;
-// }
 
 
 
-////// howBout.html ////////
 
-.firstHowBout{
-//border: 1px solid black;
-height: 100%;
-width: 100%;
-}
-.secondHowBout{
-background-color: rgba(74, 191, 203,0.98);
--webkit-box-shadow: 3px 4px 5px 0px rgba(0,0,0,0.62);
--moz-box-shadow: 3px 4px 5px 0px rgba(0,0,0,0.62);
-box-shadow: 3px 4px 5px 0px rgba(0,0,0,0.62);
 
-//border: 1px dotted blue;
-height: 100%;
-max-height: 500px;
-//width: 50%;
-max-width: 600px;
-min-width: 350px;
-margin-top:5%;
-}
-.searchBarDiv{
-  //border: 2px solid black;
-  height: 100px;
-  padding: 0;
-}
-.searchBar{
-  //border: 2px solid red;
-  height: 100%;
-  width: 100%;
-}
- #map {
-        border: 1px solid black;
-        height: 100%;
-        background-color: black;
-      }
-.controls {
-  margin-top: 10px;
-  border: 1px solid transparent;
-  border-radius: 2px 0 0 2px;
-  box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  min-height: 32px;
-  // height: 100%;
-  // width: 100%;
-  outline: none;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
-}
 
-/// rating directive
+
+/*/// rating directive*/
 
 .rating {
   font-size: 175%;

@@ -1,0 +1,9 @@
+{
+  "firebase": "upick-88",
+  "public": ".",
+  "ignore": [
+    "firebase.json",
+    "**/.*",
+    "**/node_modules/**"
+  ]
+}

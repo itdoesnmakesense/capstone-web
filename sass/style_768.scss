@@ -9,16 +9,16 @@ $secondary-bg: url("../img/874-goofy-food-blue-iphone-wallpaper copy 2.png");
 $third-bg: url("../img/bg-2-2.png");
 
 body{
-   //background-color: black;
-  //background: $secondary-bg;
+   /*background-color: black;*/
+  /*background: $secondary-bg;*/
   overflow-x: hidden;
 }
 
 
 
-// LOG IN ////////////////////////
+/*// LOG IN ////////////////////////*/
 .first{
-//border: 1px solid black;
+/*border: 1px solid black;*/
 height: 100%;
 width: 100%;
 
@@ -31,23 +31,23 @@ background-color: rgba(74, 191, 203,0.98);
 -moz-box-shadow: 3px 4px 5px 0px rgba(0,0,0,0.62);
 box-shadow: 3px 4px 5px 0px rgba(0,0,0,0.62);
 
-//border: 1px dotted blue;
+/*border: 1px dotted blue;*/
 height: 100%;
 max-height: 500px;
-//width: 50%;
+/*width: 50%;*/
 max-width: 600px;
 min-width: 350px;
 margin-top:5%;
 }
 .appName{
- //border: 2px dotted red;
+ /*border: 2px dotted red;*/
  height: 75%; 
  max-height:360px;
  min-height: 255px;
  padding:0;
 }
 .loginBtn{
-//something maybe
+/*something maybe*/
 }
 .loginPageBtns{
   height:100%;
@@ -67,56 +67,56 @@ box-shadow: 3px 4px 5px 0px rgba(0,0,0,0.62);
   line-height: 160px !important;
 }
 .fbLogin{
-  //border: 2px dotted green;
+  /*border: 2px dotted green;*/
   height: 180px;
 }
 .quickLogin{
-  //border: 2px dotted black;
+  /*border: 2px dotted black;*/
   height: 180px;
 }
 
-// OH ///
+/*// OH ///*/
+.container{
+  margin-right: 0;
+  margin-left: 0;
+  padding:0;
+  width: 100%;
+}
 
 .firstOh{
-//border: 1px solid black;
-height: 700px;
-width: 100%;
-padding: 0;
-}
-.secondOh{
-//border: 1px dotted pink;
+/*border: 1px solid black;*/
 height: 100%;
 width: 100%;
 padding: 0;
 margin: 0;
-// background-color: rgba(74, 191, 203,0.98);
-// -webkit-box-shadow: 3px 4px 5px 0px rgba(0,0,0,0.62);
-// -moz-box-shadow: 3px 4px 5px 0px rgba(0,0,0,0.62);
-// box-shadow: 3px 4px 5px 0px rgba(0,0,0,0.62);
+ /*background-color: rgba(74, 191, 203,0.98);*/
+ /*-webkit-box-shadow: 3px 4px 5px 0px rgba(0,0,0,0.62);*/
+ /*-moz-box-shadow: 3px 4px 5px 0px rgba(0,0,0,0.62);*/
+ /*box-shadow: 3px 4px 5px 0px rgba(0,0,0,0.62);*/
 
 }
 
 .optionsCol{
   margin-top: 0;
- //border: 5px dotted black;
+ /*border: 5px dotted black;*/
   height: 100%; 
   max-height: 180px;
   width: 100%;
   padding-right:5px;
   padding-left: 0;
-  //max-width: 485px;
+  /*max-width: 485px;*/
 }
 .uPickBtn{
   line-height: 1.75 !important;
 }
 
 .ohBtns{
- // border: 1px dotted red;
+  /*border: 1px dotted red;*/
  height: 100%; 
  width: 100%;
  border-radius:0;
  max-height: 180px;
-  //max-width:160px;
+  /*max-width:160px;*/
    text-align: center; 
   -webkit-box-shadow: 3px 4px 5px 0px rgba(0,0,0,0.62);
   -moz-box-shadow: 3px 4px 5px 0px rgba(0,0,0,0.62);
@@ -127,7 +127,7 @@ margin: 0;
 }
 
 .placesDiv{
-  //border: 2px dotted black;
+  /*border: 2px dotted black;*/
   height: 85%;
   max-height:450px;
   min-height: 360px;
@@ -137,15 +137,9 @@ margin: 0;
 .placesRowMargin{
   margin: 0;
 }
-.objDiv{
- // border: 2px dotted green;
-  height: 100%;
-  margin-top: 10px;
-  //max-width: 485;
-  //padding-left:0;
-}
+
 .placeObjDiv{
-  //border: 2px dotted red;
+  /*border: 2px dotted red;*/
   background-color: #eee;
   height: 180px;
   margin: 10px 0px 10px 0;
@@ -157,14 +151,14 @@ margin: 0;
 }
 
 .placesDataRow{
- // border: 1px dotted black;
+  /*border: 1px dotted black;*/
   height: 100%;
   margin: 0;
 }
 .placesContentDiv{
-  //border: 2px dotted blue;
+  /*border: 2px dotted blue;*/
   height:100%;
-  //max-width: 485px;
+  /*max-width: 485px;*/
 }
 .placesDetailsDiv{
   display: block;
@@ -172,7 +166,7 @@ margin: 0;
   height: 40%;
 }
 .placesNameDiv{
-  //border: 1px dotted blue;
+  /*border: 1px dotted blue;*/
   height: 25%;
   width: 100%;
   max-width: 275px;
@@ -181,7 +175,7 @@ margin: 0;
   text-align: center;
 }
 .detailName{
-  //border: 1px dotted red;
+  /*border: 1px dotted red;*/
   height:100%;
   width:100%;
   margin-top: 10px;
@@ -189,26 +183,26 @@ margin: 0;
   overflow: hidden;
 }
 .detailAddress{
-  //border: 1px dotted yellow;
+  /*border: 1px dotted yellow;*/
   font-size: 1em;
 }
 .detailNumber{
  font-size: 1em;
-  //border: 1px dotted pink;
+  /*border: 1px dotted pink;*/
 }
 .detailWebsite{
-  //border: 1px dotted green;
+  /*border: 1px dotted green;*/
   font-size: 11px;
   overflow: hidden;
 }
 
 .placesRatingDiv{
-  //border: 1px dotted green;
+  /*border: 1px dotted green;*/
   height: 25%;
   padding:0;
 }
 .placesVicinityDiv{
-  //border: 1px dotted yellow;
+  /*border: 1px dotted yellow;*/
   height: 25%;
 }
 .large{
